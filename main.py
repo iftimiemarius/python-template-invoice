@@ -1,3 +1,10 @@
+"""
+
+    This application takes the template.docx file and replaces
+    the tags with the data within the .json configuration files
+
+"""
+
 from docxtpl import DocxTemplate
 
 import utils
@@ -6,7 +13,13 @@ COMPANY_DETAILS_PATH = 'company_details.json'
 INVOICE_DETAILS_PATH = 'invoice_details.json'
 
 
-if __name__ == '__main__':
+def main():
+    """
+
+        Read the config files, compute additional fields and save the file
+
+    """
+
     context = utils.read_details_json(COMPANY_DETAILS_PATH, INVOICE_DETAILS_PATH)
 
     total_amount = 0
@@ -19,4 +32,10 @@ if __name__ == '__main__':
 
     template = DocxTemplate('template.docx')
     template.render(context)
-    template.save('{}.docx'.format(context['invoice_number']))
+
+    filename = context['invoice_number']
+    template.save(f'{filename}.docx')
+
+
+if __name__ == '__main__':
+    main()

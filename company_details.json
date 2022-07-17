@@ -1,0 +1,11 @@
+{
+  "company_name": "TEST COMPANY",
+  "company_registration_number": "0000000",
+  "company_id": "01234567",
+  "address": "nowhere",
+  "phone": "0000000000",
+  "email": "test@company.com",
+  "bank": "Testing Bank",
+  "swift": "TEST000",
+  "iban": "TEST0TEST"
+}

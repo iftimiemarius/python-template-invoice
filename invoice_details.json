@@ -1,0 +1,22 @@
+{
+  "invoice_number": "TEST-1",
+  "invoice_date": "01/01/2022",
+  "due_date": "01/02/2022",
+  "buyer_company_name": "BUYER_COMPANY",
+  "buyer_company_id": "02468024",
+  "buyer_address": "somewhere",
+  "services": [
+    {
+      "description": "product 1",
+      "unit": "unit",
+      "quantity": 1,
+      "unit_price": 100
+    },
+    {
+      "description": "product 2",
+      "unit": "unit",
+      "quantity": 5,
+      "unit_price": 11
+    }
+  ]
+}

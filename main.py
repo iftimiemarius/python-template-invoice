@@ -9,7 +9,8 @@ from docxtpl import DocxTemplate
 
 import utils
 
-COMPANY_DETAILS_PATH = 'company_details.json'
+# COMPANY_DETAILS_PATH = 'company_details.json'
+COMPANY_DETAILS_PATH = 'company_details.xlsx'
 INVOICE_DETAILS_PATH = 'invoice_details.json'
 
 
@@ -20,7 +21,7 @@ def main():
 
     """
 
-    context = utils.read_details_json(COMPANY_DETAILS_PATH, INVOICE_DETAILS_PATH)
+    context = utils.read_details(COMPANY_DETAILS_PATH, INVOICE_DETAILS_PATH)
 
     total_amount = 0
     for index, service in enumerate(context['services']):
